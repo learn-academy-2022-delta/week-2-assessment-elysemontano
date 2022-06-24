@@ -10,18 +10,47 @@
 // Reminder: The test will call your function
 // Run the file with the following command: $ yarn jest
 
+// describe("functionName", () => {
+//   it("describes what my test and function does", () => {
+//     expect(functionName("pass any params needed")).toEqual("Expect output")
+//   })
+// })
+
 // --------------------INSTRUCTOR EXAMPLE: Create a function that takes in an array of numbers and returns an array with all the numbers multipled by 3.
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const numbersArray1 = [6, 7, 8, 9, 10]
-// Expected output: [18, 21, 24, 27, 30]
-const numbersArray2 = [24, 27, 30, 33, 36]
-// Expected output: [72, 81, 90, 99, 108]
+
+
+describe("multiplyByThree", () => {
+  it("takes in an array of numbers and returns an array with all the numbers multipled by 3", () => {
+    const numbersArray1 = [6, 7, 8, 9, 10]
+    // Expected output: [18, 21, 24, 27, 30]
+    const numbersArray2 = [24, 27, 30, 33, 36]
+    // Expected output: [72, 81, 90, 99, 108]
+    expect(multiplyByThree(numbersArray1)).toEqual([18, 21, 24, 27, 30])
+    expect(multiplyByThree(numbersArray2)).toEqual([72, 81, 90, 99, 108])
+  })
+})
+
+// ReferenceError: multiplyByThree is not defined
 
 
 // b) Create the function that makes the test pass.
 
+// Pseudocode:
+// Declare a function called multiplyByThree
+// Set parameter to be array
+// Use .map to iterate over array
+    // Multiply each value by 3
+// Return our result
+
+const multiplyByThree = (array) => {
+  return array.map(value => value * 3)
+}
+
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
 
 
 // --------------------1) Create a function that takes a number as an argument and decides if the number is evenly divisble by three or not.

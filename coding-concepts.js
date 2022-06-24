@@ -5,6 +5,8 @@
 // First, predict the outcome based on your understanding of the code.
 // Then, uncomment the console.log() and verify the output. Briefly explain why your initial answer was correct or incorrect.
 
+// test
+
 // --------------------1) What will this log?
 
 var cohort = "Delta 2022"
